@@ -5,13 +5,13 @@ import { Scale, FileSignature, CheckCircle } from "lucide-react";
 
 export const Legality = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 md:py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-slate-900 rounded-3xl p-8 md:p-16 text-white relative overflow-hidden"
+          className="bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-16 text-white relative overflow-hidden shadow-2xl"
         >
           {/* Decor */}
           <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
@@ -20,28 +20,28 @@ export const Legality = () => {
 
           <div className="flex flex-col lg:flex-row items-center gap-12 relative z-10">
             <div className="w-full lg:w-1/2">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-white text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
                 <FileSignature className="h-4 w-4" />
                 <span>Legalitas Perusahaan Terjamin</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold font-jakarta mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold font-jakarta mb-6 leading-tight">
                 Bermitra dengan Entitas Bisnis yang Jelas & Legal
               </h2>
-              <p className="text-slate-300 text-lg mb-8 leading-relaxed">
+              <p className="text-slate-300 text-base md:text-lg mb-8 leading-relaxed">
                 Kami beroperasi di bawah payung hukum badan usaha resmi. Segala bentuk transaksi, kerahasiaan naskah (NDA), dan Letter of Acceptance dijamin keabsahannya.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="text-primary h-5 w-5" />
-                  <span className="font-medium">NIB Resmi dari Kementerian Investasi / BKPM</span>
+                  <CheckCircle className="text-orange-500 h-5 w-5 shrink-0" />
+                  <span className="font-medium text-sm md:text-base">NIB Resmi dari Kementerian Investasi / BKPM</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="text-primary h-5 w-5" />
-                  <span className="font-medium">NPWP Badan Usaha yang Valid</span>
+                  <CheckCircle className="text-orange-500 h-5 w-5 shrink-0" />
+                  <span className="font-medium text-sm md:text-base">NPWP Badan Usaha yang Valid</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="text-primary h-5 w-5" />
-                  <span className="font-medium">Non-Disclosure Agreement (NDA) untuk setiap Klien</span>
+                  <CheckCircle className="text-orange-500 h-5 w-5 shrink-0" />
+                  <span className="font-medium text-sm md:text-base">Non-Disclosure Agreement (NDA) untuk setiap Klien</span>
                 </div>
               </div>
             </div>
@@ -59,8 +59,12 @@ export const Legality = () => {
                       <span className="font-medium text-white">Penerbitan & Konsultan</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="opacity-70">Domisili</span>
-                      <span className="font-medium text-white">Minahasa, Sulawesi Utara</span>
+                      <span className="opacity-70">Status Legal</span>
+                      <span className="font-medium text-orange-400">Terdaftar Resmi</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="opacity-70">NIB</span>
+                      <span className="font-medium text-white">0304220013798</span>
                     </div>
                   </div>
                </div>

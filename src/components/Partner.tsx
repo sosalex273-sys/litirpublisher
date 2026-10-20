@@ -12,12 +12,12 @@ export const Partner = () => {
   ];
 
   return (
-    <section className="py-10 bg-white border-y border-slate-100 overflow-hidden">
+    <section className="py-10 bg-slate-50 dark:bg-slate-900/80 border-y border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-6">
-        <p className="text-center text-sm font-semibold text-slate-400 mb-6 uppercase tracking-wider">
+        <p className="text-center text-xs md:text-sm font-semibold text-slate-500 dark:text-slate-400 mb-6 uppercase tracking-wider">
           Dipercaya oleh Dosen & Peneliti dari
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-16 opacity-75 grayscale hover:grayscale-0 transition-all duration-500">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
@@ -25,7 +25,7 @@ export const Partner = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="text-lg md:text-xl font-bold font-jakarta text-slate-700"
+              className="text-base md:text-xl font-bold font-jakarta text-slate-800 dark:text-slate-200"
             >
               {partner}
             </motion.div>

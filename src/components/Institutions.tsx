@@ -23,19 +23,19 @@ export const Institutions = () => {
   ];
 
   return (
-    <section className="py-20 bg-white overflow-hidden border-t border-slate-100">
+    <section className="py-20 bg-slate-50 dark:bg-slate-900 overflow-hidden border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-black text-slate-800 font-jakarta mb-3 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-black text-slate-800 dark:text-white font-jakarta mb-3 tracking-tight">
             Litir Publisher
           </h2>
-          <p className="text-xl md:text-2xl font-bold text-slate-600">
+          <p className="text-lg md:text-2xl font-bold text-slate-600 dark:text-slate-300">
             Telah Melayani Kolega dari Berbagai Institusi
           </p>
-          <div className="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
+          <div className="w-24 h-1 bg-orange-500 mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 max-w-7xl mx-auto">
+        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 max-w-7xl mx-auto">
           {logos.map((logo, idx) => (
             <motion.div
               key={logo.name}
@@ -43,16 +43,16 @@ export const Institutions = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: (idx % 5) * 0.1 }}
-              className="w-32 h-16 md:w-40 md:h-20 relative flex items-center justify-center transition-transform hover:scale-110 duration-300 opacity-90 hover:opacity-100"
+              className="w-28 h-14 md:w-40 md:h-20 p-2 rounded-xl bg-white/40 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 relative flex items-center justify-center transition-transform hover:scale-110 duration-300"
             >
               <img 
                 src={logo.url} 
                 alt={`Logo ${logo.name}`}
-                className="max-w-full max-h-full object-contain"
+                className="max-w-full max-h-full object-contain filter brightness-90 dark:brightness-105"
                 loading="lazy"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
-                  e.currentTarget.parentElement!.innerHTML = `<span class="font-bold text-slate-400">${logo.name}</span>`;
+                  e.currentTarget.parentElement!.innerHTML = `<span class="font-bold text-xs md:text-sm text-slate-400">${logo.name}</span>`;
                 }}
               />
             </motion.div>

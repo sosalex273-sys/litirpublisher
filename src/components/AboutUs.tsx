@@ -18,14 +18,14 @@ export const AboutUs = () => {
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-200 dark:bg-slate-800 shadow-lg">
               <img
                 src="/images/about.png"
-                alt="Tim Triaksara Publisher"
+                alt="Tim Litir Publisher"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-amber-500/10 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-orange-500/10 mix-blend-overlay" />
             </div>
             {/* Floating Element */}
             <div className="absolute -bottom-6 -right-6 bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-xl max-w-[200px] border border-slate-100 dark:border-slate-800 hidden md:block">
-              <div className="text-4xl font-bold text-amber-600 dark:text-amber-400 font-jakarta mb-2">10+</div>
+              <div className="text-4xl font-bold text-orange-500 font-jakarta mb-2">10+</div>
               <div className="text-sm text-slate-600 dark:text-slate-300 font-medium">Tahun Pengalaman di Dunia Publikasi</div>
             </div>
           </motion.div>
@@ -41,7 +41,7 @@ export const AboutUs = () => {
               Mitra Terpercaya untuk Kesuksesan Akademik Anda
             </h2>
             <p className="text-sm md:text-lg text-slate-600 dark:text-slate-300 mb-6 md:mb-8 leading-relaxed">
-              <strong className="text-slate-900 dark:text-white">TRIAKSARA PUBLISHER</strong> adalah Lembaga Publikasi Ilmiah yang sudah berdiri sejak 2018 dan resmi berbadan hukum dengan Nomor Induk Berusaha (NIB): 0304220013798 serta sudah berbentuk CV. Sejak didirikan, TRIAKSARA PUBLISHER telah membantu ribuan akademisi dalam menerbitkan jurnal dan buku, baik yang terakreditasi nasional maupun bereputasi internasional.
+              <strong className="text-slate-900 dark:text-white">LITIR PUBLISHER</strong> adalah Lembaga Publikasi Ilmiah yang sudah berdiri sejak 2018 dan resmi berbadan hukum dengan Nomor Induk Berusaha (NIB): 0304220013798 serta sudah berbentuk CV. Sejak didirikan, LITIR PUBLISHER telah membantu ribuan akademisi dalam menerbitkan jurnal dan buku, baik yang terakreditasi nasional maupun bereputasi internasional.
             </p>
             <ul className="space-y-4">
               {[

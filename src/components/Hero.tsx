@@ -8,8 +8,8 @@ export const Hero = () => {
   return (
     <section className="relative pt-24 pb-12 md:pt-40 md:pb-32 overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
       {/* Background Decor */}
-      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] opacity-20 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/40 to-blue-500/20 blur-[100px] rounded-full mix-blend-multiply dark:mix-blend-screen" />
+      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] opacity-25 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/30 to-blue-700/40 blur-[100px] rounded-full mix-blend-multiply dark:mix-blend-screen" />
       </div>
 
       <div className="container relative mx-auto px-4 md:px-6 lg:px-8 z-10">
@@ -21,9 +21,9 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-sm font-medium mb-6 border border-amber-500/20"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 text-sm font-medium mb-6 border border-orange-500/20"
             >
-              <Star className="h-4 w-4 fill-amber-500 text-amber-500" />
+              <Star className="h-4 w-4 fill-orange-500 text-orange-500" />
               <span>Pendampingan Publikasi Ilmiah & Konsultasi Karir Dosen</span>
             </motion.div>
 
@@ -52,7 +52,7 @@ export const Hero = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4"
             >
-              <Button size="lg" className="w-auto rounded-full px-6 md:px-8 h-12 md:h-14 text-sm md:text-base gap-1.5 md:gap-2 shadow-lg shadow-amber-500/25 bg-amber-600 hover:bg-amber-700 text-white" onClick={() => window.open('https://wa.me/6281528476713', '_blank')}>
+              <Button size="lg" className="w-auto rounded-full px-6 md:px-8 h-12 md:h-14 text-sm md:text-base gap-1.5 md:gap-2 shadow-lg shadow-orange-500/25 bg-orange-500 hover:bg-orange-600 text-white" onClick={() => window.open('https://wa.me/628981669927', '_blank')}>
                 Konsultasi Sekarang
                 <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />
               </Button>
@@ -78,14 +78,14 @@ export const Hero = () => {
               />
               
               {/* Central Background Shape */}
-              <div className="absolute w-[260px] h-[260px] md:w-[380px] md:h-[380px] rounded-full bg-gradient-to-tr from-primary/20 to-amber-200/50 border-[6px] md:border-[8px] border-white shadow-xl z-0" />
+              <div className="absolute w-[260px] h-[260px] md:w-[380px] md:h-[380px] rounded-full bg-gradient-to-tr from-blue-600/30 via-orange-500/20 to-blue-900/30 border-[6px] md:border-[8px] border-white shadow-xl z-0" />
               
               {/* Image Container */}
               <div className="absolute bottom-0 w-[240px] h-[360px] md:w-[320px] md:h-[480px] bg-slate-100 rounded-t-[120px] md:rounded-t-[160px] shadow-2xl overflow-hidden border-[6px] md:border-8 border-white z-10 flex items-center justify-center">
                   <img 
-                    src="/images/hero.png?v=2" 
-                    alt="Konsultan Pendidikan Laki-Laki Berpakaian Batik Emas" 
-                    className="w-full h-full object-cover object-[center_20%] scale-[1.08]" 
+                    src="/images/hero10.png" 
+                    alt="Konsultan Litir Publisher" 
+                    className="w-full h-full object-cover object-top" 
                   />
               </div>
 
@@ -134,16 +134,16 @@ export const Hero = () => {
               <motion.div 
                 animate={{ y: [0, 8, 0] }}
                 transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut", delay: 0.5 }}
-                className="absolute top-0 md:top-[5%] right-[-10px] md:right-0 lg:-right-10 z-20 bg-white dark:bg-slate-900 p-2 md:p-3 rounded-2xl shadow-xl border border-amber-100 dark:border-slate-800 w-[200px] md:w-[240px] scale-[0.8] md:scale-100 origin-top-right"
+                className="absolute top-0 md:top-[5%] right-[-10px] md:right-0 lg:-right-10 z-20 bg-white dark:bg-slate-900 p-2 md:p-3 rounded-2xl shadow-xl border border-blue-100 dark:border-blue-950 w-[200px] md:w-[240px] scale-[0.8] md:scale-100 origin-top-right"
               >
-                <div className="bg-gradient-to-r from-amber-600 to-amber-500 text-white text-[8px] md:text-[10px] font-bold px-2 py-1 md:px-3 md:py-1 rounded-md inline-block mb-1.5 md:mb-2">
+                <div className="bg-gradient-to-r from-blue-900 to-orange-500 text-white text-[8px] md:text-[10px] font-bold px-2 py-1 md:px-3 md:py-1 rounded-md inline-block mb-1.5 md:mb-2">
                   Benefit Pasti:
                 </div>
                 <div className="grid grid-cols-1 gap-x-2 gap-y-1 md:gap-y-1.5">
-                  <div className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 md:w-3.5 md:h-3.5 text-amber-500" /><span className="text-[8px] md:text-[10px] font-medium text-slate-700 dark:text-slate-200">Asistensi Hingga Publish</span></div>
-                  <div className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 md:w-3.5 md:h-3.5 text-amber-500" /><span className="text-[8px] md:text-[10px] font-medium text-slate-700 dark:text-slate-200">Legalitas Jelas</span></div>
-                  <div className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 md:w-3.5 md:h-3.5 text-amber-500" /><span className="text-[8px] md:text-[10px] font-medium text-slate-700 dark:text-slate-200">Tracking Progress</span></div>
-                  <div className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 md:w-3.5 md:h-3.5 text-amber-500" /><span className="text-[8px] md:text-[10px] font-medium text-slate-700 dark:text-slate-200">Administrasi Lengkap</span></div>
+                  <div className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 md:w-3.5 md:h-3.5 text-orange-500" /><span className="text-[8px] md:text-[10px] font-medium text-slate-700 dark:text-slate-200">Asistensi Hingga Publish</span></div>
+                  <div className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 md:w-3.5 md:h-3.5 text-orange-500" /><span className="text-[8px] md:text-[10px] font-medium text-slate-700 dark:text-slate-200">Legalitas Jelas</span></div>
+                  <div className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 md:w-3.5 md:h-3.5 text-orange-500" /><span className="text-[8px] md:text-[10px] font-medium text-slate-700 dark:text-slate-200">Tracking Progress</span></div>
+                  <div className="flex items-center gap-1.5"><CheckCircle2 className="w-3 h-3 md:w-3.5 md:h-3.5 text-orange-500" /><span className="text-[8px] md:text-[10px] font-medium text-slate-700 dark:text-slate-200">Administrasi Lengkap</span></div>
                 </div>
               </motion.div>
 

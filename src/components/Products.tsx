@@ -165,10 +165,10 @@ const products = [
 ];
 
 export const Products = () => {
-  const waLink = "https://wa.me/6281528476713";
+  const waLink = "https://wa.me/628981669927";
 
   return (
-    <section id="produk" className="py-12 md:py-20 lg:py-28 bg-amber-50/30 dark:bg-slate-950 transition-colors duration-300">
+    <section id="produk" className="py-12 md:py-20 lg:py-28 bg-slate-50/80 dark:bg-slate-950 transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product, index) => (
@@ -178,7 +178,7 @@ export const Products = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-8 border border-amber-100/50 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col h-full group"
+              className="bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-8 border border-slate-200/80 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col h-full group"
             >
               {/* SVG Badge */}
               <div className="flex justify-center mb-8">
@@ -203,7 +203,7 @@ export const Products = () => {
               <div className="mt-auto pt-6">
                 <a
                   href={`/produk#${product.badgeIcon}`}
-                  className="inline-flex items-center gap-1.5 text-[#C9A227] text-sm font-bold hover:text-amber-600 transition-colors"
+                  className="inline-flex items-center gap-1.5 text-orange-500 text-sm font-bold hover:text-orange-600 transition-colors"
                 >
                   Selengkapnya <ArrowRight className="w-4 h-4" />
                 </a>

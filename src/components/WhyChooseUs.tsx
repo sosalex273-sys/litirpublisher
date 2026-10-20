@@ -37,7 +37,7 @@ export const WhyChooseUs = () => {
           className="max-w-2xl mx-auto mb-16"
         >
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold font-jakarta text-slate-900 mb-4">
-            Mengapa Memilih Triaksara Publisher?
+            Mengapa Memilih Litir Publisher?
           </h2>
           <p className="text-sm md:text-lg text-slate-600">
             Kami menawarkan lebih dari sekadar jasa publikasi. Kami memberikan ketenangan pikiran dan jaminan profesionalisme.

@@ -3,7 +3,7 @@ export const testimonials = [
     id: 1,
     name: "Dr. Budi Santoso, M.Si",
     role: "Dosen Universitas Indonesia",
-    content: "Layanan yang luar biasa profesional. Artikel saya berhasil tembus Scopus Q2 berkat pendampingan yang intensif dari tim Triaksara Publisher. Proses komunikasi sangat responsif dan transparan.",
+    content: "Layanan yang luar biasa profesional. Artikel saya berhasil tembus Scopus Q2 berkat pendampingan yang intensif dari tim Litir Publisher. Proses komunikasi sangat responsif dan transparan.",
     rating: 5,
     image: "/images/testimonials/pria1.png"
   },
@@ -11,7 +11,7 @@ export const testimonials = [
     id: 2,
     name: "Prof. Siti Aminah, Ph.D",
     role: "Guru Besar UGM",
-    content: "Pengurusan HKI untuk produk penelitian saya sangat cepat dan transparan. Tidak perlu pusing mengurus administrasi yang rumit. Tim Triaksara sangat membantu hingga sertifikat HKI terbit.",
+    content: "Pengurusan HKI untuk produk penelitian saya sangat cepat dan transparan. Tidak perlu pusing mengurus administrasi yang rumit. Tim Litir Publisher sangat membantu hingga sertifikat HKI terbit.",
     rating: 5,
     image: "/images/testimonials/wanita.png"
   },
@@ -43,7 +43,7 @@ export const testimonials = [
     id: 6,
     name: "Dewi Kusumawati, M.Hum",
     role: "Peneliti LIPI",
-    content: "Saya sangat terkesan dengan kecepatan dan kualitas layanan penerbitan Triaksara. Naskah penelitian saya yang sudah lama tertunda akhirnya bisa diterbitkan dengan kualitas terbaik.",
+    content: "Saya sangat terkesan dengan kecepatan dan kualitas layanan penerbitan Litir Publisher. Naskah penelitian saya yang sudah lama tertunda akhirnya bisa diterbitkan dengan kualitas terbaik.",
     rating: 5,
     image: "/images/testimonials/wanita2.png"
   },
@@ -51,7 +51,7 @@ export const testimonials = [
     id: 7,
     name: "Prof. Hendra Gunawan, Ph.D",
     role: "Guru Besar Universitas Hasanuddin",
-    content: "Triaksara Publisher benar-benar memahami kebutuhan akademisi. Layanan submit jurnal internasional mereka sangat membantu saya dalam menembus jurnal terindeks Scopus Q1.",
+    content: "Litir Publisher benar-benar memahami kebutuhan akademisi. Layanan submit jurnal internasional mereka sangat membantu saya dalam menembus jurnal terindeks Scopus Q1.",
     rating: 5,
     image: "/images/testimonials/pria4.png"
   },
@@ -59,7 +59,7 @@ export const testimonials = [
     id: 8,
     name: "Nurul Fadhilah, M.Sc",
     role: "Dosen Universitas Airlangga",
-    content: "Tim Triaksara sangat sabar dalam membimbing saya dari awal hingga artikel terbit. Penjelasannya jelas dan tidak membingungkan. Artikel saya berhasil terbit di jurnal WoS!",
+    content: "Tim Litir Publisher sangat sabar dalam membimbing saya dari awal hingga artikel terbit. Penjelasannya jelas dan tidak membingungkan. Artikel saya berhasil terbit di jurnal WoS!",
     rating: 5,
     image: "/images/testimonials/wanita3.png"
   },

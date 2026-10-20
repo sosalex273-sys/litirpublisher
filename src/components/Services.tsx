@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, GraduationCap, Globe } from "lucide-react";
 
 export const Services = () => {
-  const waLink = "https://wa.me/6281528476713";
+  const waLink = "https://wa.me/628981669927";
 
   return (
     <section id="layanan" className="py-12 md:py-24 lg:py-32 bg-white dark:bg-slate-900 transition-colors duration-300">
@@ -16,7 +16,7 @@ export const Services = () => {
             viewport={{ once: true }}
             className="text-slate-500 dark:text-slate-400 font-medium text-sm md:text-base mb-2"
           >
-            Manfaatkan Segera Layanan Triaksara Publisher
+            Manfaatkan Segera Layanan Litir Publisher
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -42,7 +42,7 @@ export const Services = () => {
               Terbitkan Artikel<br />Ilmiah di Tingkat<br />Nasional
             </h3>
             <p className="text-sm text-slate-600 text-center mb-8 leading-relaxed">
-              Triaksara Publisher menyediakan layanan bimbingan publikasi artikel jurnal di tingkat Nasional (Garuda, Moraref dan Sinta 1-6) dengan kualitas unggul.
+              Litir Publisher menyediakan layanan bimbingan publikasi artikel jurnal di tingkat Nasional (Garuda, Moraref dan Sinta 1-6) dengan kualitas unggul.
             </p>
             
             <div className="bg-white p-4 rounded-lg mb-8 flex flex-col justify-center gap-4 shadow-sm min-h-[120px] w-full border border-slate-200">
@@ -111,7 +111,7 @@ export const Services = () => {
               Terbitkan Artikel<br />Ilmiah di Tingkat<br />Internasional
             </h3>
             <p className="text-sm text-white/90 text-center mb-8 leading-relaxed relative z-10">
-              Triaksara Publisher memberikan layanan publikasi artikel jurnal di tingkat Internasional Bereputasi tinggi (Scopus, WOS, dll) dengan pendampingan ekstra.
+              Litir Publisher memberikan layanan publikasi artikel jurnal di tingkat Internasional Bereputasi tinggi (Scopus, WOS, dll) dengan pendampingan ekstra.
             </p>
             
             <div className="bg-white p-4 rounded-lg mb-8 flex flex-col justify-center gap-4 shadow-sm min-h-[160px] w-full relative z-10 border border-slate-200">
@@ -211,7 +211,7 @@ export const Services = () => {
               Konsultasi Karir<br />untuk Dosen /<br />Tenaga Pengajar
             </h3>
             <p className="text-sm text-slate-600 text-center mb-8 leading-relaxed">
-              Triaksara Publisher menawarkan layanan pendampingan karir bagi Dosen terkait dengan pemenuhan angka kredit dan proyeksi kenaikan JAD.
+              Litir Publisher menawarkan layanan pendampingan karir bagi Dosen terkait dengan pemenuhan angka kredit dan proyeksi kenaikan JAD.
             </p>
             
             <div className="mb-8 flex items-center justify-center p-4 rounded-xl bg-slate-50 border border-slate-100 mt-auto">

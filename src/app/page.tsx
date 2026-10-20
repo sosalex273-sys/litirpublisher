@@ -1,17 +1,4 @@
 import { Hero } from "@/components/Hero";
-import fs from "fs";
-import path from "path";
-
-// Auto-copy generated hero image on server load
-try {
-  const srcImage = "C:\\Users\\Lenovo\\.gemini\\antigravity-ide\\brain\\18f9dfa3-2898-4c57-8336-41a2bc30d156\\hero_male_batik_1789400419174.png";
-  const destImage = path.join(process.cwd(), "public", "images", "hero.png");
-  if (fs.existsSync(srcImage)) {
-    fs.copyFileSync(srcImage, destImage);
-  }
-} catch (err) {
-  // Silent catch
-}
 import { Partner } from "@/components/Partner";
 import { AboutUs } from "@/components/AboutUs";
 import { WhyChooseUs } from "@/components/WhyChooseUs";

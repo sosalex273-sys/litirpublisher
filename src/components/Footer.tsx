@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../lglg.png";
+import logo from "../../litirlogo.png";
 import { Twitter } from "lucide-react";
 
 export const Footer = () => {
@@ -9,18 +9,21 @@ export const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-1">
-            <Link href="#" className="inline-block mb-6">
+            <Link href="#" className="flex items-center gap-3 mb-6 group">
               <Image 
                 src={logo} 
-                alt="Triaksara Publisher Logo" 
-                className="h-24 md:h-32 lg:h-36 w-auto object-contain mb-2" 
+                alt="Litir Publisher Logo" 
+                className="h-14 w-auto object-contain rounded-full transition-transform group-hover:scale-105" 
               />
+              <span className="font-bold text-xl font-jakarta text-white tracking-tight">
+                Litir <span className="text-amber-400">Publisher</span>
+              </span>
             </Link>
             <p className="text-slate-400 mb-4 leading-relaxed text-sm">
               Mitra publikasi akademik terpercaya yang memberikan layanan komprehensif mulai dari editing hingga penerbitan dengan standar internasional.
             </p>
             <p className="text-xs text-slate-400 leading-relaxed">
-              📍 <span className="font-semibold text-slate-300">Domisili:</span> Jl. Melati No. 12, Condongcatur, Depok, Sleman, D.I. Yogyakarta, 55283
+              📍 <span className="font-semibold text-slate-300">Domisili:</span> Desa Tateli Tiga, Jaga III, Kecamatan Mandolang, Kabupaten Minahasa, Sulawesi Utara
             </p>
 
           </div>
@@ -43,7 +46,7 @@ export const Footer = () => {
               <li><Link href="/#tentang-kami" className="hover:text-primary transition-colors">Tim Kami</Link></li>
               <li><Link href="/#tentang-kami" className="hover:text-primary transition-colors">Karir</Link></li>
               <li><Link href="/#testimoni" className="hover:text-primary transition-colors">Testimoni</Link></li>
-              <li><a href="https://wa.me/6281528476713" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">Hubungi Kami</a></li>
+              <li><a href="https://wa.me/628981669927" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">Hubungi Kami</a></li>
             </ul>
           </div>
 
@@ -59,7 +62,7 @@ export const Footer = () => {
 
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
-            &copy; {new Date().getFullYear()} Triaksara Publisher. All rights reserved.
+            &copy; {new Date().getFullYear()} Litir Publisher. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-slate-500">
             <span>Dibuat dengan ❤️ untuk Akademisi Indonesia</span>

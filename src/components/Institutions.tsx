@@ -27,7 +27,7 @@ export const Institutions = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-black text-slate-800 font-jakarta mb-3 tracking-tight">
-            Triaksara Publisher
+            Litir Publisher
           </h2>
           <p className="text-xl md:text-2xl font-bold text-slate-600">
             Telah Melayani Kolega dari Berbagai Institusi

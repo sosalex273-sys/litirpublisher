@@ -59,10 +59,10 @@ const FlyerCard = ({ imgUrl, onError, onClick }: { imgUrl: string, onError: () =
     {/* Rebranding Header (Dipindah ke atas gambar agar tidak menutupi teks pada flyer) */}
     <div className="w-full bg-white px-3 py-2 flex items-center justify-between border-b border-slate-100">
       <div className="flex items-center gap-1.5">
-        <div className="w-5 h-5 bg-primary rounded-md flex items-center justify-center shrink-0">
-          <span className="text-white text-[10px] font-black">T</span>
+        <div className="w-5 h-5 rounded-full overflow-hidden shrink-0">
+          <img src="/images/litirlogo.png" alt="Litir Logo" className="w-full h-full object-cover" />
         </div>
-        <span className="text-slate-800 text-[10px] font-black font-jakarta tracking-tighter">Triaksara Publisher</span>
+        <span className="text-slate-800 text-[10px] font-black font-jakarta tracking-tighter">Litir Publisher</span>
       </div>
       <span className="text-[9px] font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded-full">SINTA</span>
     </div>
@@ -77,10 +77,10 @@ const FlyerCard = ({ imgUrl, onError, onClick }: { imgUrl: string, onError: () =
     </div>
 
     {/* Address/Contact Footer */}
-    <div className="w-full bg-amber-950 text-white py-2 px-3 flex flex-col justify-center items-center text-center">
-      <span className="text-[8px] font-bold uppercase tracking-widest text-amber-400 mb-1">Layanan Publikasi Jurnal</span>
-      <span className="text-[9px] font-medium opacity-90 mb-0.5">WhatsApp: +62 815-2847-6713</span>
-      <span className="text-[8px] font-light text-slate-300 leading-tight">Greenland Sendang Residence<br/>Blok D2 Sendang</span>
+    <div className="w-full bg-[#0A1333] text-white py-2 px-3 flex flex-col justify-center items-center text-center border-t border-blue-950">
+      <span className="text-[8px] font-bold uppercase tracking-widest text-orange-400 mb-1">Layanan Publikasi Jurnal</span>
+      <span className="text-[9px] font-medium opacity-90 mb-0.5">WhatsApp: 08981669927</span>
+      <span className="text-[8px] font-light text-slate-300 leading-tight">Desa Tateli Tiga, Jaga III<br/>Mandolang, Minahasa, Sulut</span>
     </div>
   </div>
 );
@@ -126,7 +126,7 @@ export const CallForPaper = () => {
   };
 
   return (
-    <section className="py-20 bg-amber-950 overflow-hidden">
+    <section className="py-20 bg-[#0B1536] overflow-hidden border-t border-blue-950">
       <div className="container mx-auto px-4 md:px-6">
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
@@ -204,17 +204,17 @@ export const CallForPaper = () => {
                 onClick={(e) => e.stopPropagation()}
               />
               <div className="absolute top-0 left-0 bg-white px-4 py-3 rounded-br-3xl z-10 flex flex-col items-center justify-center shadow-lg w-[120px] h-[90px] border-b-2 border-r-2 border-slate-100">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center shrink-0 mb-2">
-                  <span className="text-white text-base font-black">T</span>
+                <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 mb-1">
+                  <img src="/images/litirlogo.png" alt="Litir Logo" className="w-full h-full object-cover" />
                 </div>
-                <span className="text-slate-800 text-[12px] font-black font-jakarta tracking-tighter leading-tight text-center">Triaksara<br/>Publisher</span>
+                <span className="text-slate-800 text-[12px] font-black font-jakarta tracking-tighter leading-tight text-center">Litir<br/>Publisher</span>
               </div>
 
               {/* Address Overlay on Zoomed Image */}
-              <div className="absolute bottom-0 left-0 w-full bg-amber-950 text-white py-4 px-6 z-10 flex flex-col justify-center items-center text-center rounded-b-lg border-t border-slate-700/50">
-                <span className="text-sm font-bold uppercase tracking-widest text-amber-400 mb-2">Layanan Publikasi Jurnal</span>
-                <span className="text-base font-medium opacity-90 mb-1">WhatsApp: +62 815-2847-6713</span>
-                <span className="text-xs font-light text-slate-300">Greenland Sendang Residence Blok D2 Sendang</span>
+              <div className="absolute bottom-0 left-0 w-full bg-[#0A1333] text-white py-4 px-6 z-10 flex flex-col justify-center items-center text-center rounded-b-lg border-t border-blue-900/60">
+                <span className="text-sm font-bold uppercase tracking-widest text-orange-400 mb-2">Layanan Publikasi Jurnal</span>
+                <span className="text-base font-medium opacity-90 mb-1">WhatsApp: 08981669927</span>
+                <span className="text-xs font-light text-slate-300">Desa Tateli Tiga, Jaga III, Kecamatan Mandolang, Kabupaten Minahasa, Sulawesi Utara</span>
               </div>
             </div>
           </motion.div>

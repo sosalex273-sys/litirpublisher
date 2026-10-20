@@ -9,17 +9,17 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Triaksara Publisher - Premium Publishing Company",
+  title: "Litir Publisher - Premium Publishing Company",
   description: "Layanan publikasi jurnal, buku, dan HKI profesional terbaik.",
-  keywords: ["Jurnal", "Publikasi", "HKI", "Buku", "Triaksara Publisher"],
-  authors: [{ name: "Triaksara Publisher" }],
+  keywords: ["Jurnal", "Publikasi", "HKI", "Buku", "Litir Publisher"],
+  authors: [{ name: "Litir Publisher" }],
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://triaksarapublisher.id",
-    title: "Triaksara Publisher - Premium Publishing",
+    url: "https://litirpublisher.com",
+    title: "Litir Publisher - Premium Publishing",
     description: "Layanan publikasi terbaik untuk kebutuhan akademik dan profesional.",
-    siteName: "Triaksara Publisher",
+    siteName: "Litir Publisher",
   },
   robots: {
     index: true,

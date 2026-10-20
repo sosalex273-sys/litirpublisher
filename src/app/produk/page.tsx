@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { CheckCircle2 as CheckCircle2Icon, MessageCircle as MessageCircleIcon, ArrowRight, ArrowLeft } from 'lucide-react';
 
 export default function ProdukPage() {
-  const waLink = "https://wa.me/6281528476713";
+  const waLink = "https://wa.me/628981669927";
 
   const packages = [
     {
@@ -193,7 +193,7 @@ export default function ProdukPage() {
       {/* CTA Banner Section */}
       <section className="bg-[#C9A227] py-24 text-center px-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-10 max-w-2xl mx-auto leading-tight tracking-tight">
-          Siap Publikasi? Mulai Bersama Triaksara Publisher!
+          Siap Publikasi? Mulai Bersama Litir Publisher!
         </h2>
         <a 
           href={waLink} 

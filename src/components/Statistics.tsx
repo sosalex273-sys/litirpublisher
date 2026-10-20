@@ -1,24 +1,34 @@
 "use client";
 
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const Counter = ({ to, suffix = "" }: { to: number; suffix?: string }) => {
+const Counter = ({ to, suffix = "", start }: { to: number; suffix?: string; start: boolean }) => {
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest) + suffix);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [displayValue, setDisplayValue] = useState<string>("0" + suffix);
 
   useEffect(() => {
-    if (isInView) {
-      animate(count, to, { duration: 2.5, ease: "easeOut" });
+    if (start) {
+      const controls = animate(count, to, {
+        duration: 2,
+        ease: "easeOut",
+        onUpdate: (latest) => {
+          setDisplayValue(Math.round(latest) + suffix);
+        }
+      });
+      return () => controls.stop();
     }
-  }, [count, isInView, to]);
+  }, [count, start, to, suffix]);
 
-  return <motion.span ref={ref}>{rounded}</motion.span>;
+  return <span>{displayValue}</span>;
 };
 
 export const Statistics = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  // Menggunakan margin 0px agar langsung terpicu saat terlihat di layar HP
+  const isInView = useInView(sectionRef, { once: true, margin: "0px" });
+
   const stats = [
     { value: 1358, suffix: "+", label: "Happy Client" },
     { value: 598, suffix: "", label: "Article Published" },
@@ -27,10 +37,13 @@ export const Statistics = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-[#0B1536] text-white overflow-hidden relative border-y border-blue-950">
+    <section 
+      ref={sectionRef}
+      className="py-12 md:py-20 bg-[#0B1536] text-white overflow-hidden relative border-y border-blue-950"
+    >
       <div className="container mx-auto px-4">
         {/* Title Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -43,18 +56,18 @@ export const Statistics = () => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 text-center max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-8 text-center max-w-5xl mx-auto">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15 }}
-              className="flex flex-col items-center justify-center space-y-3"
+              transition={{ delay: index * 0.1 }}
+              className="flex flex-col items-center justify-center space-y-2 md:space-y-3"
             >
               <div className="text-4xl md:text-5xl lg:text-6xl font-black font-jakarta text-orange-500 tracking-tighter">
-                <Counter to={stat.value} suffix={stat.suffix} />
+                <Counter to={stat.value} suffix={stat.suffix} start={isInView} />
               </div>
               <div className="text-sm md:text-sm font-medium text-white/70 tracking-wide">
                 {stat.label}

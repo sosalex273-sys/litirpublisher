@@ -8,7 +8,6 @@ import { PublicationFlow } from "@/components/PublicationFlow";
 import { Statistics } from "@/components/Statistics";
 import { Advantages } from "@/components/Advantages";
 import { Legality } from "@/components/Legality";
-import { CallForPaper } from "@/components/CallForPaper";
 import { Institutions } from "@/components/Institutions";
 import { Portfolio } from "@/components/Portfolio";
 import { Testimonial } from "@/components/Testimonial";

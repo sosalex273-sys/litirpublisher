@@ -1,58 +1,131 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { CheckCircle2, ShieldAlert } from "lucide-react";
 
 export const Advantages = () => {
+  const points = [
+    {
+      title: "Cek Plagiasi & AI Komprehensif",
+      desc: "Pemeriksaan Turnitin resmi dengan similarity rendah dan verifikasi keaslian naskah.",
+    },
+    {
+      title: "Reviewer Bergelar Doktor / Ph.D",
+      desc: "Penelaahan substansi oleh pakar akademik yang relevan dengan rumpun ilmu naskah.",
+    },
+    {
+      title: "Standardisasi Sitasi & Layout",
+      desc: "Sinkronisasi referensi (Mendeley/Zotero) dan penyesuaian gaya selingkung publisher.",
+    },
+    {
+      title: "Garansi Asistensi Revisi",
+      desc: "Pendampingan tanggapan masukan reviewer hingga memperoleh keputusan penerimaan.",
+    },
+  ];
+
   return (
-    <section className="py-20 md:py-32 bg-slate-50">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+    <section className="py-16 md:py-24 lg:py-32 bg-slate-950 text-white relative overflow-hidden border-t border-slate-900">
+      {/* Background ambient radial glow */}
+      <div className="absolute top-1/3 -right-40 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          {/* Left Column: Text & Points */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="w-full lg:w-1/2"
           >
-            <h2 className="text-3xl md:text-4xl font-bold font-jakarta text-slate-900 mb-6 leading-tight">
-              Kualitas Standar <span className="text-primary">Internasional</span> untuk Naskah Anda
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-amber-500/25 text-amber-400 text-xs sm:text-sm font-semibold mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              <span>Jaminan Kualitas Editorial</span>
+            </div>
+
+            {/* Heading */}
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold font-jakarta text-white tracking-tight leading-tight mb-5">
+              Kualitas Standar{" "}
+              <span className="bg-gradient-to-r from-amber-400 via-orange-300 to-amber-500 bg-clip-text text-transparent">
+                Internasional
+              </span>{" "}
+              untuk Setiap Naskah Anda
             </h2>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              Tim editor dan proofreader kami terdiri dari native speaker dan akademisi berpengalaman yang memahami struktur, gaya bahasa, dan kriteria ketat publisher global.
+
+            {/* Description */}
+            <p className="text-sm sm:text-base text-slate-300 mb-8 leading-relaxed">
+              Didukung oleh tim editor substantif, proofreader bersertifikasi, dan akademisi berpengalaman yang memahami struktur, kaidah sitasi, serta kriteria ketat publisher global.
             </p>
-            
+
+            {/* Feature Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                "Plagiarism & AI Check Bebas Kuota",
-                "Reviewer Minimal Lulusan S3/Ph.D",
-                "Formatting Mendeley / EndNote",
-                "Garansi Revisi Bahasa 1x"
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
-                  <div className="mt-0.5 bg-green-100 p-1 rounded-full text-green-600 flex-shrink-0">
-                    <Check className="h-4 w-4" />
+              {points.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.08 }}
+                  className="bg-slate-900/80 border border-slate-800/80 hover:border-amber-500/40 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-amber-500/5 group"
+                >
+                  <div className="mt-0.5 p-1.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 shrink-0 group-hover:bg-amber-500/20 transition-colors">
+                    <CheckCircle2 className="w-4 h-4" />
                   </div>
-                  <span className="text-sm font-medium text-slate-700">{item}</span>
-                </div>
+                  <div>
+                    <h3 className="text-sm sm:text-base font-bold text-white font-jakarta mb-1 group-hover:text-amber-300 transition-colors leading-snug">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-slate-400 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
 
+          {/* Right Column: Image Frame with Floating Badge */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="w-full lg:w-1/2 relative"
           >
-             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-200">
-               <img
-                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop"
-                 alt="Tim Profesional dan Kualitas Internasional"
-                 className="w-full h-auto object-cover aspect-[4/3]"
-               />
-             </div>
-             {/* Decorative blob */}
-             <div className="absolute -z-10 -bottom-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
+            {/* Image Container */}
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/3] bg-slate-900 border border-slate-800 shadow-2xl">
+              <Image
+                src="/images/sedangbekerja.png"
+                alt="Tim Profesional Sedang Bekerja"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            </div>
+
+            {/* Floating Trust Card */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="absolute -bottom-6 -left-2 sm:-left-6 bg-slate-900/95 border border-slate-700/80 p-5 rounded-2xl shadow-2xl backdrop-blur-md max-w-[240px]"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                  <ShieldAlert className="w-5 h-5" />
+                </div>
+                <div className="text-sm font-bold text-emerald-400 font-jakarta">
+                  100% Etika Publikasi
+                </div>
+              </div>
+              <p className="text-xs text-slate-300 leading-relaxed font-medium">
+                Bebas jurnal predator, melindungi reputasi akademik naskah Anda.
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </div>

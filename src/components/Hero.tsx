@@ -62,20 +62,18 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-10 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 w-full"
           >
             <Button
-              size="lg"
-              className="w-full sm:w-auto rounded-full px-8 h-13 text-sm sm:text-base font-semibold gap-2 shadow-xl shadow-orange-500/20 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white border border-orange-400/30 transition-transform active:scale-95 hover:scale-[1.02]"
+              className="rounded-full px-6 min-h-[58px] sm:min-h-[62px] text-base sm:text-lg font-bold gap-2.5 shadow-2xl shadow-orange-500/30 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white border border-orange-400/40 transition-all duration-200 active:scale-95 hover:scale-105"
               onClick={() => window.open("https://wa.me/628981669927", "_blank")}
             >
-              <span>Konsultasi Naskah Sekarang</span>
-              <ArrowRight className="h-4 w-4" />
+              <span>Konsultasi Naskah</span>
+              <ArrowRight className="h-5 w-5" />
             </Button>
             <Button
-              size="lg"
               variant="outline"
-              className="w-full sm:w-auto rounded-full px-8 h-13 text-sm sm:text-base font-medium border-slate-700 hover:border-slate-500 bg-slate-900/60 hover:bg-slate-800 text-slate-200 transition-colors"
+              className="rounded-full px-6 min-h-[58px] sm:min-h-[62px] text-base sm:text-lg font-semibold border-slate-700 hover:border-slate-500 bg-slate-900/80 hover:bg-slate-800 text-slate-200 transition-all duration-200"
               onClick={() => document.getElementById("layanan")?.scrollIntoView({ behavior: "smooth" })}
             >
               Lihat Skema Pendampingan
